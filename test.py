@@ -17,16 +17,23 @@ akshaay_face_encoding = face_recognition.face_encodings(akshaay_img)[0]
 chandan_img = face_recognition.load_image_file("chandan.jpeg")
 chandan_face_encoding = face_recognition.face_encodings(chandan_img)[0]
 
+# Load a third sample picture and learn how to recognize it.
+abhilash_img = face_recognition.load_image_file("abhilash.jpeg")
+abhilash_face_encoding = face_recognition.face_encodings(abhilash_img)[0]
+
+
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     aditya_face_encoding,
     akshaay_face_encoding,
-    chandan_face_encoding
+    chandan_face_encoding,
+    abhilash_face_encoding
 ]
 known_face_names = [
     "Aditya",
     "Akshaay",
-    "Chandan"
+    "Chandan",
+    "Abhilash"
 ]
 
 while True:
